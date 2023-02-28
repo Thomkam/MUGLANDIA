@@ -1,36 +1,45 @@
-<body class = "container">
+<body class="container">
   <h1>Welcome to <strong>MUGLANDIA</strong></h1>
   <h2>Rent Your Favorite Mugs</h2>
 
-  <div>
+  <div class="menu">
     <h2>Home
       <ul>
-          <%= link_to "All mugs", mugs_path  %>
+        <li><%= link_to "All mugs", mugs_path  %></li>
       </ul>
     </h2>
   </div>
 
-  <div>
+  <div class="intro">
     <p>Do you love mugs as much as we do?</p>
     <p>Here you can rent your favorite mugs from other mug lovers.</p>
   </div>
 
-  <div>
+  <div class="card-container">
     <h3>Available Mugs</h3>
-    <div>
     <div class="cards">
-        <ul>
-          <% @mugs.each do |mug| %>
-        <div class="card-category" style="text-align:center; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(mug.picture)">
-              <img src="<%= mug.picture %>">
-              <h3><%= mug.description %></h3>
-              <p>Price: <%= mug.price %></p>
-              <p>Size: <%= mug.size %></p>
-        </div>
-          <% end %>
-        </ul>
-    </div>
+      <% @mugs.each do |mug| %>
+          <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="<%= mug.picture %>" alt="<%= mug.description %>">
+                </div>
+
+                <div class="flip-card-back">
+                    <img src="<%= mug.picture %>" alt="<%= mug.description %>">
+                    <h3><%= mug.description %></h3>
+                    <p>Size: <%= mug.size %></p>
+                    <p>Price: <%= mug.price %></p>
+                    <p>Color: <%= mug.color %></p>
+                </div>
+              </div>
+          </div>
+      <% end %>
     </div>
   </div>
+
+  <%# commentaires %>
+
+<%# end commment %>
+
 </body>
-</html>
