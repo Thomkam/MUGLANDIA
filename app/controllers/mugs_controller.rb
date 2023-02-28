@@ -7,6 +7,7 @@ class MugsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
     render :show
   end
 

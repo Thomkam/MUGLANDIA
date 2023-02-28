@@ -80,3 +80,8 @@ mug15.save!
 mug16 = Mug.new(price: "40", color: "blue", size: "xl", name: "mug-4xl", description: "A wonderfull blue Mug in porcelain", picture: "https://www.allbranded.fr/out/shop-fr/pictures/generated/product/4/480_480_80/10037801_F1.jpg")
 mug16.user = riwan
 mug16.save!
+
+booking1 = Booking.new(start_date: "2023-03-03 00-00-00", end_date: "2023-04-03 00-00-00")
+booking1.user = thomas
+booking1.mug = mug16
+booking1.save!
