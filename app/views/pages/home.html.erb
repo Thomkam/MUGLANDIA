@@ -6,7 +6,6 @@
     <h2>Home
       <ul>
           <%= link_to "All mugs", mugs_path  %>
-          <%= link_to "All mugs", mugs_path  %>
       </ul>
     </h2>
   </div>
@@ -19,16 +18,18 @@
   <div>
     <h3>Available Mugs</h3>
     <div>
-      <ul>
-        <% @mugs.each do |mug| %>
-          <li>
-            <img src="<%= mug.picture %>">
-            <h3><%= mug.description %></h3>
-            <p>Price: <%= mug.price %></p>
-            <p>Size: <%= mug.size %></p>
-          </li>
-        <% end %>
-      </ul>
+    <div class="cards">
+        <ul>
+          <% @mugs.each do |mug| %>
+        <div class="card-category" style="text-align:center; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(mug.picture)">
+              <img src="<%= mug.picture %>">
+              <h3><%= mug.description %></h3>
+              <p>Price: <%= mug.price %></p>
+              <p>Size: <%= mug.size %></p>
+        </div>
+          <% end %>
+        </ul>
+    </div>
     </div>
   </div>
 </body>

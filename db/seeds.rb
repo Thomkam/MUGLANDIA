@@ -21,7 +21,7 @@ mug1 = Mug.new(price: "10", color: "white", size: "s", name: "mug-1s", descripti
 mug1.user = riwan
 mug1.save!
 
-mug2 = Mug.new(price: "20", color: "white", size: "m", name: "mug-1m", description: "A wonderfull White Mug in porcelain", picture: "https://images.loopper.com/resized/?h=370&w=320&q=100&i=media%2Fcatalog%2Fproduct%2Fm%2Fo%2Fmok-sinor-bla-st-0-290511.jpg")
+mug2 = Mug.new(price: "30", color: "white", size: "s", name: "mug-1s", description: "A wonderfull White Mug in porcelain", picture: "https://images.loopper.com/resized/?h=370&w=320&q=100&i=media%2Fcatalog%2Fproduct%2Fm%2Fo%2Fmok-sinor-bla-st-0-290511.jpg")
 mug2.user = riwan
 mug2.save!
 
