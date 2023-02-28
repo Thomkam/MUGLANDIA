@@ -5,9 +5,8 @@
   <div>
     <h2>Home
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="mugs.html">Mugs</a></li>
-        <li><a href="vision.html">Our Vision</a></li>
+          <%= link_to "All mugs", mugs_path  %>
+          <%= link_to "All mugs", mugs_path  %>
       </ul>
     </h2>
   </div>
@@ -19,28 +18,18 @@
 
   <div>
     <h3>Available Mugs</h3>
-    <ul>
-      <% @mugs.each do |mug| %>
-        <li>
-          <img src="<%= mug.picture %>">
-          <h3><%= mug.description %></h3>
-          <p>Price: <%= mug.price %></p>
-          <p>Size: <%= mug.size %></p>
-        </li>
-        <li>
-          <img src="<%= mug.picture %>">
-          <h3><%= mug.description %></h3>
-          <p>Price: <%= mug.price %></p>
-          <p>Size: <%= mug.size %></p>
-        </li>
-        <li>
-          <img src="<%= mug.picture %>">
-          <h3><%= mug.description %></h3>
-          <p>Price: <%= mug.price %></p>
-          <p>Size: <%= mug.size %></p>
-        </li>
-      <% end %>
-    </ul>
+    <div>
+      <ul>
+        <% @mugs.each do |mug| %>
+          <li>
+            <img src="<%= mug.picture %>">
+            <h3><%= mug.description %></h3>
+            <p>Price: <%= mug.price %></p>
+            <p>Size: <%= mug.size %></p>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </body>
 </html>
