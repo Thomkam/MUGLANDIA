@@ -13,9 +13,14 @@
       <p><strong>size: </strong><%=@mug.size%></p>
       <p><strong>localisation: </strong><%=@mug.localisation%></p>
       <p><strong>price: </strong><%=@mug.price%> €</p>
-      <%=link_to booking_path do%>
+
+      <%= link_to new_mug_booking_path(@mug) do%>
         <button type="button" class="btn btn-primary">book this mug</button>
       <% end %>
+
+      <%= link_to 'index des mugs' , mugs_path %>
     </div>
   </div>
 </div>
+
+<%# PREFIX + _path + (peut être des instances --> va regarder rails routes pour les ids) %>
