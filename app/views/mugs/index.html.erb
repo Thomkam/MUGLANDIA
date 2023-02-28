@@ -3,7 +3,7 @@
 <div class="card-category" style="text-align:center; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(mug.picture)">
   <% @mugs.each do |mug| %>
   <%=link_to mug_path(mug) do%>
-      <img src="<%= mug.picture %>">
+      <img src="<%= mug.picture %>" width = 400px>
       <h3><%= mug.description %></h3>
       <p>Price: <%= mug.price %></p>
       <p>Size: <%= mug.size %></p>

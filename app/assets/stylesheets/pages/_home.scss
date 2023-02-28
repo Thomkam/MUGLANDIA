@@ -1,12 +1,119 @@
-// Specific CSS for your home-page
+body {
+  background-color: #aaa9aa;
+  }
+
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-    img{
-    margin-top: 28px;
-  }
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
 }
+
+.card {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card__content {
+  padding: 20px;
+}
+
+.card__title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.card__description {
+  color: #6c757d;
+  font-size: 16px;
+  margin: 10px 0 0;
+}
+
+.card__footer {
+  align-items: center;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card__footer:hover {
+  transform: translateY(0);
+}
+
+.card__price {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card__button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.card__button:hover {
+  background-color: #0062cc;
+}
+
+.card__overlay {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.2s ease-in-out;
+  width: 100%;
+}
+
+.card__overlay h3 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.card__overlay p {
+  margin: 10px 0 0;
+  font-size: 18px;
+  font-weight: 300;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
@@ -40,4 +147,53 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+
+// Test flip
+
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: rgb(255, 255, 255);
+  color: rgba(122, 59, 0, 0.936);
+  transform: rotateY(180deg);
 }
