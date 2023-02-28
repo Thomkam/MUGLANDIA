@@ -1,1 +1,7 @@
 <p>Hello Index</p>
+<%= simple_form_for @booking do |f| %>
+  <%= f.input :name %>
+  <%= f.input :color %>
+  <%= f.input :size %>
+  <%= f.button :submit, label: "Create Booking" %>
+<% end %>

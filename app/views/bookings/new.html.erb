@@ -1,0 +1,9 @@
+<p>Hello Show</p>
+<%= simple_form_for([@mug, @booking]) do |f| %>
+  <%#= f.input :name %>
+  <%#= f.input :color %>
+  <%#= f.input :size %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.button :submit, label: "Create Booking" %>
+<% end %>

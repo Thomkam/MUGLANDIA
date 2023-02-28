@@ -7,12 +7,13 @@ class BookingsController < ApplicationController
   end
 
   def show
-    render :show
+    # render :show
   end
 
   def new
+    @mug = Mug.find(params[:mug_id])
     @booking = Booking.new
-    render :new
+    # render :new
   end
 
   def edit
@@ -48,6 +49,6 @@ class BookingsController < ApplicationController
     end
 
     def booking_params
-      params.require(:booking).permit(:user_id, :mug_id, :start_date, :end_date, :status)
+      params.require(:booking).permit(:user_id, :mug_id, :start_date, :end_date)
     end
 end
