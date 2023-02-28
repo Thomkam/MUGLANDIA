@@ -1,2 +1,46 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<body>
+  <h1>Welcome to <strong>MUGLANDIA</strong></h1>
+  <h2>Rent Your Favorite Mugs</h2>
+
+  <div>
+    <h2>Home
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mugs.html">Mugs</a></li>
+        <li><a href="vision.html">Our Vision</a></li>
+      </ul>
+    </h2>
+  </div>
+
+  <div>
+    <p>Do you love mugs as much as we do?</p>
+    <p>Here you can rent your favorite mugs from other mug lovers.</p>
+  </div>
+
+  <div>
+    <h3>Available Mugs</h3>
+    <ul>
+      <% @mugs.each do |mug| %>
+        <li>
+          <img src="<%= mug.picture %>">
+          <h3><%= mug.description %></h3>
+          <p>Price: <%= mug.price %></p>
+          <p>Size: <%= mug.size %></p>
+        </li>
+        <li>
+          <img src="<%= mug.picture %>">
+          <h3><%= mug.description %></h3>
+          <p>Price: <%= mug.price %></p>
+          <p>Size: <%= mug.size %></p>
+        </li>
+        <li>
+          <img src="<%= mug.picture %>">
+          <h3><%= mug.description %></h3>
+          <p>Price: <%= mug.price %></p>
+          <p>Size: <%= mug.size %></p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</body>
+</html>
