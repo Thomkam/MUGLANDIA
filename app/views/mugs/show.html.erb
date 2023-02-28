@@ -1,0 +1,21 @@
+<div class = "container">
+  <div style="border: 1px solid rgb(221, 221, 221); border-radius: 12px; padding: 24px; box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;">
+  <%#mug info%>
+  <div class="card-group">
+    <div class= "">
+      <img src="<%= @mug.picture%>" width = 300px>
+    </div>
+    <div style="margin-left: 40px ;">
+      <h2><%=@mug.name%></h2>
+      <h4><%=@mug.description%></h4>
+      <h3>Deteils</h3>
+      <p><strong>color: </strong><%=@mug.color%></p>
+      <p><strong>size: </strong><%=@mug.size%></p>
+      <p><strong>localisation: </strong><%=@mug.localisation%></p>
+      <p><strong>price: </strong><%=@mug.price%> €</p>
+      <%=link_to booking_path do%>
+        <button type="button" class="btn btn-primary">book this mug</button>
+      <% end %>
+    </div>
+  </div>
+</div>
