@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
   def new
     @mug = Mug.find(params[:mug_id])
     @booking = Booking.new
-    # render :new
+    render :new
   end
 
   def edit
