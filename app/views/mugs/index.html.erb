@@ -6,15 +6,15 @@
     <h3>Available Mugs</h3>
     <div class="cards">
       <% @mugs.each do |mug| %>
-          <div class="flip-card">
+          <div class="flip-card" style="padding-bottom: 500px;">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="<%= mug.picture %>" alt="<%= mug.description %>">
+                      <img src="<%= mug.picture%>" width = 300px>
                 </div>
 
                 <div class="flip-card-back">
                   <%=link_to mug_path(mug) do%>
-                    <img src="<%= mug.picture %>" alt="<%= mug.description %>">
+                      <img src="<%= mug.picture%>" width = 300px>
                     <h3><%= mug.description %></h3>
                     <p>Size: <%= mug.size %></p>
                     <p>Price: <%= mug.price %></p>
