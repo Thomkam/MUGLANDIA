@@ -4,4 +4,8 @@ class PagesController < ApplicationController
   def home
     @mugs = Mug.first(3)
   end
+
+  def dashboard
+
+  end
 end

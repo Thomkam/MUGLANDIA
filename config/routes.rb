@@ -11,5 +11,4 @@ Rails.application.routes.draw do
   resources :mugs do
     resources :bookings, only: [:new, :create, :show]
   end
-
 end
