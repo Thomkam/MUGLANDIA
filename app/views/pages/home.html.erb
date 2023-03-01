@@ -26,11 +26,13 @@
                 </div>
 
                 <div class="flip-card-back">
+                  <%=link_to mug_path(mug) do%>
                     <img src="<%= mug.picture %>" alt="<%= mug.description %>">
                     <h3><%= mug.description %></h3>
                     <p>Size: <%= mug.size %></p>
                     <p>Price: <%= mug.price %></p>
                     <p>Color: <%= mug.color %></p>
+                  <% end  %>
                 </div>
               </div>
           </div>
