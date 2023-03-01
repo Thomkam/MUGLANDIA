@@ -22,9 +22,11 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-
+    @mug = Mug.find(params[:mug_id])
+    @booking.user = current_user
+    @booking.mug = @mug
     if @booking.save
-      redirect_to @booking, notice: 'Booking was successfully created.'
+      redirect_to "#", notice: 'Booking was successfully created.'
     else
       render :new
     end
@@ -49,6 +51,6 @@ class BookingsController < ApplicationController
     end
 
     def booking_params
-      params.require(:booking).permit(:user_id, :mug_id, :start_date, :end_date)
+      params.require(:booking).permit(:start_date, :end_date)
     end
 end

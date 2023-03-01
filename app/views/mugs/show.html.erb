@@ -18,17 +18,33 @@
         <p><strong>localisation: </strong><%=@mug.localisation%></p>
         <p><strong>price: </strong><%=@mug.price%> €</p>
       </div>
-      <div class ="my_card">
-        <%= simple_form_for([@mug, @booking]) do |f| %>
-        <%#= f.input :name %>
-        <%#= f.input :color %>
-        <%#= f.input :size %>
-        <%= f.input :start_date %>
-        <%= f.input :end_date %>
-        <button type="button" class="btn btn-primary"><%= f.submit "booking this mug", class:"btn btn-flat" %></button>
-      <% end %>
-      </div>
+
+
+      <%# FORM %>
+
+<div class ="my_card">
+  <%= simple_form_for([@mug, @booking]) do |f| %>
+    <%#= f.input :name %>
+    <%#= f.input :color %>
+    <%#= f.input :size %>
+    <%= f.input :start_date, id: "start_date" %>
+    <%= f.input :end_date, id: "end_date" %>
+
+    <div class="form-group">
+      <label for="days">Number of Days:</label>
+      <input type="number" name="days" id="days" min="1" max="30" required>
     </div>
-  </div>
+
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <span id="price"></span>
+    </div>
+
+    <button type="button" class="btn btn-primary" id="submit-btn">
+      <%= f.submit "booking this mug", class:"btn btn-flat" %>
+    </button>
+  <% end %>
+</div>
 
 <%# PREFIX + _path + (peut être des instances --> va regarder rails routes pour les ids) %>
+
