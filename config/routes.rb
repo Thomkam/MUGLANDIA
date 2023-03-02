@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   resources :mugs do
     resources :bookings, only: [:new, :create, :show]
   end
-
+  # get"/dashbord" to ... (method dashbord dans pages controller)
 end
