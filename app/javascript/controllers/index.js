@@ -4,16 +4,8 @@
 
 import { application } from "./application"
 
+import FlatpickrController from "./flatpickr_controller"
+application.register("flatpickr", FlatpickrController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
-
-const cards = document.querySelectorAll('#card');
-
-
-cards.forEach(card => {
-  card.addEventListener('click', () => {
-    console.log("Hello")
-    card.classList.toggle('is-flipped');
-  });
-});
-

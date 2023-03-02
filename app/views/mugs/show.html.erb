@@ -22,28 +22,43 @@
 
       <%# FORM %>
 
-<div class ="my_card">
-  <%= simple_form_for([@mug, @booking]) do |f| %>
-    <%#= f.input :name %>
-    <%#= f.input :color %>
-    <%#= f.input :size %>
-    <%= f.input :start_date, id: "start_date" %>
-    <%= f.input :end_date, id: "end_date" %>
+  <div class ="my_card">
 
-    <div class="form-group">
-      <label for="days">Number of Days:</label>
-      <input type="number" name="days" id="days" min="1" max="30" required>
-    </div>
+    <%= simple_form_for [@mug, @booking],
+                        html: {
+                          data: {
+                            controller: 'flatpickr'
+                          }
+                        } do |f| %>
+      <%# // Target each input with the stimulus controller: %>
+      <%# // <input ...data-flatpickr-target="startDateInput"...> %>
+      <%= f.input :start_date,
+                  # // Note that we have to turn our inputs to string inputs
+                  # // so that flatpickr can correctly use them
+                  as: :string,
+                  input_html: {
+                    class: '',
+                    data: {
+                      flatpickr_target: 'startDateInput',
+                    }
+                  } %>
+      <%# // <input ...data-flatpickr-target="endDateInput"...> %>
+      <%# // On peut se permettre de cacher celui-ci avec la classe bootstrap d-none
+      // car le premier input ouvre un calendrier qui autorise le choix
+      // de la date de début et de fin %>
+      <%= f.input :end_date,
+                  as: :string,
+                  input_html: {
+                    class: '',
+                    data: {
+                      flatpickr_target: 'endDateInput'
+                    }
+                  } %>
 
-    <div class="form-group">
-      <label for="price">Price:</label>
-      <span id="price"></span>
-    </div>
+        <%= f.submit 'Book now!', class: 'btn btn-primary' %>
+        <% end %>
+  </div>
 
-    <button type="button" class="btn btn-primary" id="submit-btn">
-      <%= f.submit "booking this mug", class:"btn btn-flat" %>
-    </button>
-  <% end %>
 </body>
 
 <%# PREFIX + _path + (peut être des instances --> va regarder rails routes pour les ids) %>
