@@ -1,14 +1,14 @@
 a {
   text-decoration: none;
-  color: rgb(183, 80, 252);
+  color: #8a3e18;
 }
 
 a:hover {
-  color: rgb(116, 0, 193);
+  color: #6f3a20;
 }
 
 a:visited {
-  color: rgb(58, 6, 92);
+  color: #482311;
 }
 
 
@@ -31,12 +31,12 @@ a:visited {
 
 .card:hover {
   transform: translateY(-10px);
-  color: rgb(161, 34, 245);
+
 }
 
 .card:hover .card__overlay {
   transform: translateY(0);
-  color: rgb(161, 34, 245);
+
 }
 
 .card__img {
@@ -54,7 +54,6 @@ a:visited {
 }
 
 .card__description {
-  color: #6c757d;
   font-size: 16px;
   margin: 10px 0 0;
 }
