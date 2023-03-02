@@ -8,4 +8,4 @@ class PagesController < ApplicationController
   # def dashbord
   # end
   # lié a la route dashbord dans routes
-end
+
