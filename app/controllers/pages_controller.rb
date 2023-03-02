@@ -9,3 +9,4 @@ class PagesController < ApplicationController
   # end
   # lié a la route dashbord dans routes
 
+end
