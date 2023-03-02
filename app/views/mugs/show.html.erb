@@ -1,9 +1,9 @@
-<body class = "container">
-  <%= link_to mugs_path(@mug) do%>
+<div class = "container" style="padding: 10px;">
+    <%= link_to mugs_path(@mug) do%>
     <button type="button" class="btn btn-primary">return to index</button>
-  <% end %>
+    <% end %>
 
-  <div style="border: 1px solid rgb(221, 221, 221); border-radius: 12px; padding: 24px; box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px; margin-top: 20px;">
+  <div style="border: 1px solid rgb(221, 221, 221); border-radius: 12px; padding: 24px; box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px; margin-top: 10px;">
     <%#mug info%>
     <div class="card-group">
       <div class= "">
@@ -59,6 +59,6 @@
         <% end %>
   </div>
 
-</body>
+</div>
 
 <%# PREFIX + _path + (peut être des instances --> va regarder rails routes pour les ids) %>
