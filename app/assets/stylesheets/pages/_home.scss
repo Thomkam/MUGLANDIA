@@ -1,11 +1,16 @@
 a {
   text-decoration: none;
-  color: rgb(115, 0, 191);
+  color: rgb(183, 80, 252);
 }
 
-.container {
-  padding: 0px 100px;
+a:hover {
+  color: rgb(116, 0, 193);
 }
+
+a:visited {
+  color: rgb(58, 6, 92);
+}
+
 
 .cards {
   display: grid;
@@ -26,10 +31,12 @@ a {
 
 .card:hover {
   transform: translateY(-10px);
+  color: rgb(161, 34, 245);
 }
 
 .card:hover .card__overlay {
   transform: translateY(0);
+  color: rgb(161, 34, 245);
 }
 
 .card__img {

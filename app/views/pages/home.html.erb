@@ -1,14 +1,15 @@
-<div class="container">
-  <h1>Welcome to <strong>MUGLANDIA</strong></h1>
-  <h2>Rent Your Favorite Mugs</h2>
 
-  <div class="menu">
-    <h2>Home
-      <ul>
-        <li><%= link_to "All mugs", mugs_path  %></li>
-      </ul>
-    </h2>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1523367118146-091f762cd8ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80);">
+  <div class="container">
+    <h1>Welcome to <strong>MUGLANDIA</strong></h1>
+    <p>Rent Your Favorite Mugs</p>
+    <%= link_to "See all mugs", mugs_path, class: "btn btn-flat" %>
   </div>
+</div>
+
+<div class="container my-5">
+
+
 
   <div class="intro">
     <p>Do you love mugs as much as we do?</p>
@@ -28,11 +29,12 @@
 
                 <div class="flip-card-back">
                   <%=link_to mug_path(mug) do%>
-                    <img src="<%= mug.picture %>" style ="width:350px; height:350px;" alt="<%= mug.description %>">
+                <div class="card-category" style= "width:350px; height:350px; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= mug.picture %>')">
                     <h3><%= mug.description %></h3>
                     <p>Size: <%= mug.size %></p>
                     <p>Price: <%= mug.price %></p>
                     <p>Color: <%= mug.color %></p>
+                 </div>
                   <% end  %>
                 </div>
               </div>
