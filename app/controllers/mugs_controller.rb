@@ -3,17 +3,14 @@ class MugsController < ApplicationController
 
   def index
     @mugs = Mug.all
-    render :index
   end
 
   def show
     @booking = Booking.new
-    render :show
   end
 
   def new
     @mug = Mug.new
-    render :new
   end
 
   def edit
