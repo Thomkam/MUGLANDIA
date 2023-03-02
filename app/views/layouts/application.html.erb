@@ -11,12 +11,12 @@
   </head>
 
   <body>
+    <div class="bg-color">
      <%= render "shared/navbar" %>
-        <%= yield %>
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
         <%= render "shared/flashes" %>
+        <%= yield %>
         <%= render "shared/footer" %>
+    </div>
   </body>
 
 </html>

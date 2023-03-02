@@ -3,17 +3,14 @@ class MugsController < ApplicationController
 
   def index
     @mugs = Mug.all
-    render :index
   end
 
   def show
     @booking = Booking.new
-    render :show
   end
 
   def new
     @mug = Mug.new
-    render :new
   end
 
   def edit
@@ -22,9 +19,9 @@ class MugsController < ApplicationController
 
   def create
     @mug = Mug.new(mug_params)
-
+    @mug.user = current_user
     if @mug.save
-      redirect_to @mug, notice: 'mug was successfully created.'
+      redirect_to mugs_path, notice: 'mug was successfully created 😎.'
     else
       render :new
     end
@@ -32,7 +29,7 @@ class MugsController < ApplicationController
 
   def update
     if @mug.update(mug_params)
-      redirect_to @mug, notice: 'mug was successfully updated.'
+      redirect_to @mug, notice: 'mug was successfully updated 😎.'
     else
       render :edit
     end
@@ -40,7 +37,7 @@ class MugsController < ApplicationController
 
   def destroy
     @mug.destroy
-    redirect_to mugs_url, notice: 'mug was successfully destroyed.'
+    redirect_to mugs_url, notice: 'mug was successfully destroyed 😎.'
   end
 
   private
@@ -49,6 +46,6 @@ class MugsController < ApplicationController
     end
 
     def mug_params
-      params.require(:mug).permit(:user_id, :mug_id, :start_date, :end_date, :status)
+      params.require(:mug).permit(:name, :localisation, :color, :size, :photo)
     end
 end

@@ -9,19 +9,34 @@
             <div class="flip-card" style="padding-bottom: 500px;">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
-                        <img src="<%= mug.picture%>" style ="width:350px; height: 350px;" >
-                        <h4 style="margin-top: 10px">localisation: <%= mug.localisation %></h4>
+                    <% if !mug.photo.key %>
+                      <img src="<%= mug.picture %>" style ="width:300px;  height: 300px; " >
+                    <% else %>
+                      <%= cl_image_tag mug.photo.key, height: 300, width: 400, crop: :fill %>
+                    <% end %>
+                    <h4 style="margin-top: 10px">localisation: <%= mug.localisation %></h4>
                   </div>
 
                   <div class="flip-card-back">
-                  <%=link_to mug_path(mug) do%>
-                  <div class="card-category" style= "width:350px; height:350px; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= mug.picture %>')">
-                    <h3><%= mug.description %></h3>
-                    <p>Size: <%= mug.size %></p>
-                    <p>Price: <%= mug.price %></p>
-                    <p>Color: <%= mug.color %></p>
-                  </div>
-                    <% end  %>
+                    <% if !mug.photo.key %>
+                      <%=link_to mug_path(mug) do%>
+                        <div class="card-category" style= "width:350px; height:350px; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= mug.picture %>')">
+                          <h3><%= mug.description %></h3>
+                          <p>Size: <%= mug.size %></p>
+                          <p>Price: <%= mug.price %></p>
+                          <p>Color: <%= mug.color %></p>
+                        </div>
+                      <% end  %>
+                    <% else %>
+                      <%=link_to mug_path(mug) do%>
+                        <div class="card-category" style= "width:350px; height:350px; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path mug.photo.key, height: 300, width: 400, crop: :fill %>')">
+                          <h3><%= mug.description %></h3>
+                          <p>Size: <%= mug.size %></p>
+                          <p>Price: <%= mug.price %></p>
+                          <p>Color: <%= mug.color %></p>
+                        </div>
+                      <% end  %>
+                    <% end %>
                   </div>
                 </div>
             </div>
