@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     @mugs = Mug.first(3)
   end
 
-  def dashboard
+  # def dashbord
+  # end
+  # lié a la route dashbord dans routes
 
-  end
-end
