@@ -60,7 +60,7 @@ mug4 = Mug.new(
   size: "xl",
   name: "Ninja",
   description: "That's a mug for a ninja",
-  picture: "http://cdn.home-designing.com/wp-content/uploads/2015/10/cute-mug-ninja-600x1183.jpg",
+  picture: "https://www.cadeau-rigolo.com/6752-thickbox_default/mug-guerrier-ninja.jpg",
   localisation: "Paris"
 )
 mug4.user = riwan
@@ -84,7 +84,7 @@ mug6 = Mug.new(
   size: "m",
   name: "Dark Vador",
   description: "The perfect mug for a Dark Lord",
-  picture: "http://cdn.home-designing.com/wp-content/uploads/2015/10/darth-vader-mug-600x1200.jpg",
+  picture: "https://www.generation-souvenirs.com/24060-thickbox_default/tasse-3d-dark-vador-star-wars.jpg",
   localisation: "Marseille"
 )
 mug6.user = thomas
@@ -96,7 +96,7 @@ mug7 = Mug.new(
   size: "l",
   name: "Storm-trooper",
   description: "As their shooting skills, try to aim your mouth",
-  picture: "http://cdn.home-designing.com/wp-content/uploads/2015/10/storm-trooper-mug-600x1200.jpg",
+  picture: "https://static.fnac-static.com/multimedia/Images/FR/NR/fc/a6/5c/6072060/1505-1/tsp20221025191543/Mug-3D-Star-Wars-Stormtrooper-edition.jpg",
   localisation: "Marseille"
 )
 mug7.user = thomas

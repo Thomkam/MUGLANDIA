@@ -10,11 +10,12 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body class="container-bg" style="background-image: url(<%= image_path "paper.jpg"  %>);">
+  <body>
      <%= render "shared/navbar" %>
         <%= yield %>
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
         <%= render "shared/flashes" %>
+        <%= render "shared/footer" %>
   </body>
 </html>
