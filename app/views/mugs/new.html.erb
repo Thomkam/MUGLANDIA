@@ -1,0 +1,12 @@
+  <div class="container w-50">
+
+
+    <%= simple_form_for @mug do |f| %>
+      <%= f.input :name %>
+      <%= f.input :color %>
+      <%= f.input :size %>
+      <%= f.input :localisation %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit "Create Booking", class: 'btn btn-success' %>
+    <% end %>
+</div>
