@@ -12,7 +12,7 @@
                     <% if !mug.photo.key %>
                       <img src="<%= mug.picture %>" style ="width:300px;  height: 300px; " >
                     <% else %>
-                      <%# <%= cl_image_tag mug.photo.key, height: 300, width: 400, crop: :fill %>
+                      <%= cl_image_tag mug.photo.key, height: 300, width: 400, crop: :fill %>
                     <% end %>
                     <h4 style="margin-top: 10px">from : <%= mug.localisation %></h4>
                   </div>

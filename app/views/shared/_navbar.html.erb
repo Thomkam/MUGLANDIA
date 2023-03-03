@@ -3,7 +3,12 @@
 
 
     <div class="container">
-        <p class= "mb-0">Welcome <%= current_user.email.capitalize.split("@")[0]%></p>
+      <% if current_user %>
+          <p class= "mb-0">Welcome <%= current_user.email.capitalize.split("@")[0]%></p>
+          <%else%>
+          <p> Please Log-In</p>
+        <%end %>
+
 
 
 
