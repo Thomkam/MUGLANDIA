@@ -23,43 +23,43 @@
 
       <%# FORM %>
 
-  <div class ="my_card">
+      <div class ="my_card">
 
-    <%= simple_form_for [@mug, @booking],
-                        html: {
-                          data: {
-                            controller: 'flatpickr'
-                          }
-                        } do |f| %>
-      <%# // Target each input with the stimulus controller: %>
-      <%# // <input ...data-flatpickr-target="startDateInput"...> %>
-      <%= f.input :start_date,
-                  # // Note that we have to turn our inputs to string inputs
-                  # // so that flatpickr can correctly use them
-                  as: :string,
-                  input_html: {
-                    class: '',
-                    data: {
-                      flatpickr_target: 'startDateInput',
-                    }
-                  } %>
-      <%# // <input ...data-flatpickr-target="endDateInput"...> %>
-      <%# // On peut se permettre de cacher celui-ci avec la classe bootstrap d-none
-      // car le premier input ouvre un calendrier qui autorise le choix
-      // de la date de début et de fin %>
-      <%= f.input :end_date,
-                  as: :string,
-                  input_html: {
-                    class: '',
-                    data: {
-                      flatpickr_target: 'endDateInput'
-                    }
-                  } %>
+          <%= simple_form_for [@mug, @booking],
+                                    html: {
+                                      data: {
+                                        controller: 'flatpickr'
+                                      }
+                                    } do |f| %>
+                  <%# // Target each input with the stimulus controller: %>
+                  <%# // <input ...data-flatpickr-target="startDateInput"...> %>
+                  <%= f.input :start_date,
+                              # // Note that we have to turn our inputs to string inputs
+                              # // so that flatpickr can correctly use them
+                              as: :string,
+                              input_html: {
+                                class: '',
+                                data: {
+                                  flatpickr_target: 'startDateInput',
+                                }
+                              } %>
+                  <%# // <input ...data-flatpickr-target="endDateInput"...> %>
+                  <%# // On peut se permettre de cacher celui-ci avec la classe bootstrap d-none
+                  // car le premier input ouvre un calendrier qui autorise le choix
+                  // de la date de début et de fin %>
+                  <%= f.input :end_date,
+                              as: :string,
+                              input_html: {
+                                class: '',
+                                data: {
+                                  flatpickr_target: 'endDateInput'
+                                }
+                              } %>
 
-        <%= f.submit 'Book now!', class: 'btn btn-flat' %>
+                    <%= f.submit 'Book now!', class: 'btn btn-flat' %>
         <% end %>
-  </div>
-  </div>
+      </div>
+    </div>
   </div>
 
 </div>

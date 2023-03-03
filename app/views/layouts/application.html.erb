@@ -10,13 +10,13 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
-    <div class="bg-color">
+  <body class="bg-color container">
      <%= render "shared/navbar" %>
-        <%= render "shared/flashes" %>
         <%= yield %>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= render "shared/flashes" %>
         <%= render "shared/footer" %>
-    </div>
   </body>
 
 </html>
