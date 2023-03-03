@@ -166,7 +166,6 @@ a:visited {
 
 .flip-card {
   background-color: transparent;
-  width: 300px;
   height: 200px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -199,6 +198,7 @@ a:visited {
 .flip-card-front {
   background-color: #bbb;
   color: black;
+
 }
 
 /* Style the back side */
