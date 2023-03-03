@@ -1,4 +1,5 @@
-  <div class="container w-50">
+  <div class="container w-50 mt-5">
+    <h3 class="text-center">Add a new citizen to <strong>Muglandia</strong></h3>
 
 
     <%= simple_form_for @mug do |f| %>
@@ -7,6 +8,6 @@
       <%= f.input :size %>
       <%= f.input :localisation %>
       <%= f.input :photo, as: :file %>
-      <%= f.submit "Create Booking", class: 'btn btn-success' %>
+      <%= f.submit "Create Booking", class: 'btn btn-flat' %>
     <% end %>
 </div>
