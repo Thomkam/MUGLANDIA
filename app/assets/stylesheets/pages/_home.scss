@@ -203,7 +203,6 @@ a:visited {
 
 /* Style the back side */
 .flip-card-back {
-  background-color: rgb(255, 255, 255);
   color: rgba(122, 59, 0, 0.936);
-  transform: rotateY(180deg);
+  transform: rotateY(540deg);
 }
