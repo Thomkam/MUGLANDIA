@@ -1,16 +1,7 @@
-<div class = "">
+<div class = "container">
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-
-
-    <div class="container">
-      <% if current_user %>
-          <p class= "mb-0">Welcome <%= current_user.email.capitalize.split("@")[0]%></p>
-          <%else%>
-          <p> Please Log-In</p>
-        <%end %>
-
-
-
+    <div class="container-fluid container">
+        <p>welcome <%= current_user.email.split("@")[0]%></p>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -26,7 +17,7 @@
                 <%= link_to "Rent", new_mug_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <%= link_to "Profile", "#", class: "nav-link" %>
+              <%= link_to "profile", "#", class: "nav-link" %>
             </li>
             <li class="nav-item dropdown">
               <%= image_tag "https://img1.freepng.fr/20180701/btv/kisspng-computer-icons-avatar-user-profile-man-avatars-5b38adb9f113b0.3674732815304411459875.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
